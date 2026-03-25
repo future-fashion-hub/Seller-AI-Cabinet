@@ -1,0 +1,158 @@
+.wrapper {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+  align-items: center;
+  flex-wrap: nowrap;
+  height: 56px;
+  padding: 0 12px;
+  background: var(--surface);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.searchInput {
+  flex: 1;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--code-bg);
+  border: none;
+  padding-left: 12px;
+  padding-right: 12px;
+  font-size: 14px;
+}
+
+.searchInput:focus-within {
+  background: var(--surface);
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.viewToggle {
+  display: flex;
+  background: var(--code-bg);
+  border-radius: 6px;
+  padding: 4px;
+  gap: 4px;
+  height: 32px;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.viewBtn {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.viewBtnActive {
+  background: var(--surface);
+  color: #1890ff;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.viewBtnInactive {
+  background: transparent;
+  color: var(--text-secondary);
+  box-shadow: none;
+}
+
+.viewBtn.viewBtnActive:hover,
+.viewBtn.viewBtnActive:focus,
+.viewBtn.viewBtnActive:focus-visible {
+  background: var(--surface) !important;
+  color: #1890ff !important;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.viewBtn.viewBtnInactive:hover,
+.viewBtn.viewBtnInactive:focus,
+.viewBtn.viewBtnInactive:focus-visible {
+  background: transparent !important;
+  color: var(--text-secondary) !important;
+  box-shadow: none !important;
+}
+
+.sortContainer {
+  background: var(--surface);
+  padding: 4px;
+  border-radius: 6px;
+  height: 32px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  border: 4px solid var(--code-bg);
+}
+
+.sortSelect {
+  width: 220px;
+  height: 24px;
+}
+
+.sortSelect :global(.ant-select-selector) {
+  background: var(--surface);
+  border: none;
+  border-radius: 4px;
+  height: 24px;
+  align-items: center;
+  font-size: 13px;
+  padding: 0 8px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    height: auto;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .searchInput {
+    width: 100%;
+  }
+
+  .controls {
+    width: 100%;
+    gap: 10px;
+    justify-content: space-between;
+  }
+
+  .viewToggle {
+    display: none;
+  }
+
+  .sortContainer {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .sortSelect {
+    width: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .controls {
+    flex-wrap: wrap;
+  }
+
+  .viewToggle {
+    order: 2;
+  }
+
+  .sortContainer {
+    order: 1;
+    width: 100%;
+  }
+}

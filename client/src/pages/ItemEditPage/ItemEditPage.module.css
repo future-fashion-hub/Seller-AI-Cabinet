@@ -1,0 +1,79 @@
+.form {
+  max-width: 600px;
+  margin-top: 24px;
+}
+
+.pageTitle {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 40px;
+  letter-spacing: 0;
+  margin: 0 0 18px;
+}
+
+.paramsBlock {
+  padding: 0;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  margin-bottom: 0;
+}
+
+.paramsTitle {
+  margin: 0 0 8px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.sectionLabelItem :global(.ant-form-item-label > label) {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 140%;
+  letter-spacing: 0;
+  color: var(--text-primary);
+}
+
+.categoryNoAsterisk :global(.ant-form-item-label > label.ant-form-item-required)::before {
+  display: none !important;
+}
+
+.sectionDivider {
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  margin: 18px 0;
+}
+
+.paramsBlock :global(.ant-form-item) {
+  margin-bottom: 12px;
+}
+
+.paramsBlock :global(.ant-form-item:last-child) {
+  margin-bottom: 0;
+}
+
+.spinner {
+  text-align: center;
+  padding: 50px;
+}
+
+.needsRevisionField :global(.ant-input),
+.needsRevisionField :global(.ant-input-number),
+.needsRevisionField :global(.ant-select-selector),
+.needsRevisionField :global(.ant-input-affix-wrapper) {
+  border-color: var(--warning-text) !important;
+}
+
+.needsRevisionField :global(.ant-input:hover),
+.needsRevisionField :global(.ant-input-number:hover),
+.needsRevisionField :global(.ant-select-selector:hover),
+.needsRevisionField :global(.ant-input-affix-wrapper:hover) {
+  border-color: var(--warning-text) !important;
+}

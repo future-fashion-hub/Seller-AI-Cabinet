@@ -1,0 +1,162 @@
+.layoutTransparent {
+  background: transparent;
+}
+
+.headerBlock {
+  padding: 12px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleArea {
+  display: flex;
+  flex-direction: column;
+}
+
+.pageTitle {
+  font-family: var(--sans);
+  font-weight: 500;
+  font-style: normal;
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: 0;
+}
+
+.totalCount {
+  font-family: var(--sans);
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+
+.sider {
+  background: transparent;
+  margin-right: 24px;
+}
+
+.content {
+  min-height: 400px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+}
+
+.listView {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 50px;
+  color: #999;
+}
+
+.spinner {
+  text-align: center;
+  padding: 50px;
+}
+
+.errorState {
+  padding: 12px 0;
+}
+
+.paginationWrapper {
+  margin-top: 32px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :global(.ant-layout.ant-layout-has-sider) {
+    flex-direction: column;
+  }
+
+  :global(.ant-layout.ant-layout-has-sider > .ant-layout),
+  :global(.ant-layout.ant-layout-has-sider > .ant-layout-content) {
+    width: 100%;
+  }
+
+  .layoutTransparent {
+    flex-direction: column;
+  }
+
+  .headerBlock {
+    padding: 8px 0;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .pageTitle {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .totalCount {
+    font-size: 15px;
+  }
+
+  .sider {
+    margin-right: 0;
+    margin-bottom: 12px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .content {
+    min-height: 320px;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+
+  .listView {
+    gap: 12px;
+  }
+
+  .paginationWrapper {
+    margin-top: 20px;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+  }
+
+  .paginationWrapper :global(.ant-pagination) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    row-gap: 8px;
+  }
+}
+
+@media (max-width: 560px) {
+  .headerBlock {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
