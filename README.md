@@ -1,4 +1,4 @@
-# Авито - Тестовое задание
+# Seller-Ai-Cabinet
 
 ## Запуск через Docker Compose
 
